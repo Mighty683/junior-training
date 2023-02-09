@@ -1,6 +1,15 @@
+import { useState } from "react"
+import { AppInput } from "./components/AppInput"
+
 function App() {
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  
   return (
-    <div>Hello World</div>
+    <div>
+      <AppInput onChange={setName} label="Imie" value={name} />
+      <AppInput onChange={setSurname} label="Nazwisko" value={surname} />
+    </div>
   )
 }
 
